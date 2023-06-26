@@ -7,12 +7,15 @@
 	<link rel="stylesheet" type="text/css" href="https://bootswatch.com/5/lux/bootstrap.css">
 </head>
 <body>
-	{{#if name}}
-<nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
+{{#if name}}
+<nav class="navbar navbar-expand bg-primary" data-bs-theme="dark">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">Caronte R.C</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
     <div class="collapse navbar-collapse" id="navbarColor01">
-      <ul class="navbar-nav me-auto">
+      <ul class="navbar-nav ms-auto">
         <li class="nav-item">
           <a class="nav-link" href="/logout">Cerrar Sesión</a>
         </li>
@@ -20,12 +23,15 @@
     </div>
   </div>
 </nav>
-	{{else}}
-<nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
+{{else}}
+<nav class="navbar navbar-expand bg-primary" data-bs-theme="dark">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">Caronte R.C</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
     <div class="collapse navbar-collapse" id="navbarColor01">
-      <ul class="navbar-nav me-auto">
+      <ul class="navbar-nav ms-auto">
         <li class="nav-item">
           <a class="nav-link" href="/index">Iniciar Sesión</a>
         </li>
@@ -36,8 +42,7 @@
     </div>
   </div>
 </nav>
-	{{/if}}
-
+{{/if}}
 	<main>
 		{{{body}}}
 	</main>
