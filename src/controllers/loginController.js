@@ -29,7 +29,7 @@ function storeUser(req, res) {
 				bcrypt.hash(data.clave, 12).then(hash => {
 					data.clave = hash;
 					req.getConnection((err, conn) => {
-						conn.query("INSERT INTO usuarios SET ?", [data], (err, rows) => {
+						conn.query("INSERT INTO Usuarios SET ?", [data], (err, rows) => {
 
 							req.session.loggendin = true;
 							req.session.name = data.nombre;
