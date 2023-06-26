@@ -1,0 +1,37 @@
+<div class="card border-dark mb-3" style="max-width: 35rem; max-height:50rem; margin: 0 auto; margin-top: 15px;" >
+  <div class="card-header">Registro</div>
+  <div class="card-body">
+  	<form action="" method="post">
+		<div class="form-group">
+			<label for="nombre" class="form-label mt-4">Nombre:</label>
+			<input type="text" class="form-control" id="nombre" name="nombre" placeholder="Escribe tu nombre" required>
+		</div>
+		<div class="form-group">
+			<label for="cedula" class="form-label mt-4" >Cedula de Identidad:</label>
+			<input type="number" class="form-control" id="cedula" name="cedula" placeholder="Escribe tu número de cedula" required>
+		</div>
+		<div class="form-group">
+			<label for="correo" class="form-label mt-4">Correo:</label>
+			<input type="email" class="form-control" id="correo" name="correo" placeholder="Escribe tu correo electrónico" required>
+		{{#if error}}
+		<p class="text-danger">{{error}}</p>
+		{{/if}}
+		</div>
+		<div class="form-group">
+			<label for="clave" class="form-label mt-4">Clave:</label>
+			<input type="password" class="form-control" id="clave" name="clave" 
+			placeholder="Escribe tu clave para ingresar al sistema" required>
+		</div>
+		<div class="form-group">
+			<label for="rol"  class="form-label mt-4">Rol:</label>
+			<select id="rol" name="rol" class="form-select">
+				<option value="">...</option>
+				<option value="Administrador">Administrador</option>
+				<option value="Entrenador">Entrenador</option>
+				<option value="Jugador">Jugador</option>
+			</select>
+		</div>
+			<button type="submit"  class="btn btn-primary" style="margin-top:20px">Enviar</button>
+	</form>
+  </div>
+</div>

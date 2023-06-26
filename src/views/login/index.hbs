@@ -1,0 +1,25 @@
+<div class="card border-dark mb-3" style="max-width: 35rem; max-height:50rem; margin: 0 auto; margin-top: 15px;" >
+  <div class="card-header">Iniciar Sesión</div>
+  <div class="card-body">
+<form action="" method="post">
+		<div class="form-group">
+			<label for="correo" class="form-label mt-4">Correo:</label>
+			<input type="email" class="form-control" id="correo" name="correo" placeholder="Escribe tu correo electrónico" required>
+		</div>
+		<div class="form-group">
+			<label for="clave" class="form-label mt-4">Clave:</label>
+			<input type="password" class="form-control" id="clave" name="clave" 
+			placeholder="Escribe tu clave para ingresar al sistema" required>
+		{{#if error}}
+		<p class="text-danger">{{error}}</p>
+		{{/if}}
+		</div>
+		<button type="submit" class="btn btn-primary" style="margin-top:20px">Iniciar</button>
+
+		{{#if error}}
+		<p>{{error}}</p>
+		{{/if}}
+	</form>
+  </div>
+  </div>
+  </div>
